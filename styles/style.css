@@ -11,6 +11,11 @@ body {
     font-family: 'Bariol', sans-serif;
     /* Het scherm wordt altijd gevuld (viewheight) */
     height: 100dvh;
+    
+    /* Grote Ipads en Tablets */
+    @media (min-width: 700px) {
+        padding-inline-start: 4em;
+    }
 }
 
 /* NAV */
@@ -22,6 +27,15 @@ body {
     background-color: #172F3B;
     z-index: 10;
 
+    /* Grote Ipads en Tablets */
+    @media (min-width: 700px) {
+        max-width: fit-content;
+        left: 0;
+        top:0;
+        bottom:0;
+        right:unset;
+    }
+
     ul {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -31,6 +45,16 @@ body {
             display: grid;
             justify-items: center;
             align-items: center;
+        }
+
+        /* Grote Ipads en Tablets */
+        @media (min-width: 700px) {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            height: 100%;
+            justify-content: space-evenly;
+            padding: 1.3rem;
         }
     }
 }
@@ -43,6 +67,15 @@ body {
     text-align: center;
     -webkit-text-fill-color: #FFFFFF;
     font-size: 1.1rem;
+
+        /* Grote Ipads en Tablets */
+        @media (min-width: 700px) {
+        width: 100%;
+        background-color: #FFFFFF;
+        padding-top: 1rem;
+        -webkit-text-fill-color: #172F3B;
+        text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
 }
 
 /* MAIN */
@@ -74,6 +107,10 @@ body {
     padding: 1rem;
     padding-bottom: 7rem;
 
+   /* Grote Ipads en Tablets */
+    @media (min-width: 700px) {
+        padding: 1.5rem;
+    }
 
     img {
         /* Foto's even breed als de grid van photo-container */
@@ -92,6 +129,21 @@ body {
     }
 }
 
+/* FOOTER */
 footer {
     display: none;
+
+    /* Grote Ipads en Tablets */
+    @media (min-width: 700px) {
+        display: grid;
+        background-color: #060b0d;
+        padding: 2rem;
+
+        .footer-list {
+            display: grid;
+            grid-template-columns:repeat(auto-fit, minmax(70px, 1fr));
+            justify-items: center;
+            gap: 1em;
+        }
+    }
 }
