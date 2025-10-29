@@ -98,6 +98,7 @@ body {
     box-shadow: 3px 5px 11px #888888;
     width: 3rem;
     height: auto;
+    cursor: pointer;
 }
 
 .photo-container {
@@ -133,10 +134,17 @@ body {
 footer {
     display: none;
 
+    img {
+            &:hover {
+            background-color: #00e53d;
+            transition: 0.5s;
+        }
+    }
+
     /* Grote Ipads en Tablets */
     @media (min-width: 700px) {
         display: grid;
-        background-color: #060b0d;
+        background-color: #0c1417;
         padding: 2rem;
 
         .footer-list {
